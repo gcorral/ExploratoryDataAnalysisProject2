@@ -27,12 +27,15 @@ df$year <- rownames(df)
 
 dfm <- melt(df, id=c("year"), measure.vars=c("NON.ROAD","NONPOINT","ON.ROAD","POINT"))
 
-ggplot(dfm, aes(x=year, y=value, color=variable, group = variable)) + 
+p <- ggplot(dfm, aes(x=year, y=value, color=variable, group = variable)) + 
   geom_point() + 
   geom_line() + 
   labs(x = "Year", y = "PM2.5 (tons)", title = "PM2.5 Baltimore per Year")
 
+print(p)
 
-dev.copy(png, "plot3.png")
+png("plot3.png")
+
+print(p)
 
 dev.off()

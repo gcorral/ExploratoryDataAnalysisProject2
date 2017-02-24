@@ -1,4 +1,3 @@
-
 #
 #  Download data zip file for Peer Assessment 
 #  download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip", "./ExdataFNEI.zip")
